@@ -133,8 +133,8 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4 form" style="padding: 50px;"> <div class="text-center"><h2 >CONTACT US</h2></div>
                     
-
-                        <form class="row " method="post" action="index.html">
+                    <form class="row" action="https://formsubmit.co/nefstienergy@gmail.com" method="POST">
+                        
 
                            
 
@@ -168,9 +168,10 @@
                                 <select id="inputState" class="form-select" name="services" required>
                                   <option selected>Choose...</option>
                                
-                                <option value="services">installation</option>
-                                <option value="services">buy solar box</option>
-                                <option value="services">solar repair</option>
+                                <option value="installation">installation</option>
+                                <option value="buy">buy solar box</option>
+                                <option value="repair">solar repair</option>
+                                <option value="tracking">car tracking</option>
                                </select>
                                 </select>
                               </div>
@@ -245,6 +246,24 @@
           document.body.scrollTop = 0; // For Safari
           document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
       });
+  </script>
+  <script  src="https://smtpjs.com/v3/smtp.js">
+
+  </script>
+  <script>
+    function sendemail(){
+      Email.send({
+    Host : "smtp.mail.com",
+    Username : "ooyoma@gmail.com",
+    Password : "63CB0F2CCE1DA892D7BA21CA84738A74A463",
+    To : 'nefstienergy@gmail.com',
+    From : document.getElementById('inputEmail4').value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
   </script>
 </body>
 </html>
